@@ -28,3 +28,13 @@ def test_one_spare_adds_next_roll_as_bonus():
     roll_many(game, 17, 0)
 
     assert game.score() == 16
+
+
+def test_one_strike_adds_next_two_rolls_as_bonus():
+    game = Game()
+    game.roll(10)
+    game.roll(3)
+    game.roll(4)
+    roll_many(game, 16, 0)
+
+    assert game.score() == 24
