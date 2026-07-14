@@ -11,3 +11,10 @@ def test_gutter_game_scores_zero():
     roll_many(game, 20, 0)
 
     assert game.score() == 0
+
+
+def test_all_ones_scores_twenty():
+    game = Game()
+    roll_many(game, 20, 1)
+
+    assert game.score() == 20
