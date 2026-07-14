@@ -45,3 +45,13 @@ def test_perfect_game_scores_three_hundred():
     roll_many(game, 12, 10)
 
     assert game.score() == 300
+
+
+def test_spare_in_tenth_frame_gets_one_bonus_roll():
+    game = Game()
+    roll_many(game, 18, 0)
+    game.roll(5)
+    game.roll(5)
+    game.roll(4)
+
+    assert game.score() == 14
