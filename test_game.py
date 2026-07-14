@@ -18,3 +18,13 @@ def test_all_ones_scores_twenty():
     roll_many(game, 20, 1)
 
     assert game.score() == 20
+
+
+def test_one_spare_adds_next_roll_as_bonus():
+    game = Game()
+    game.roll(5)
+    game.roll(5)
+    game.roll(3)
+    roll_many(game, 17, 0)
+
+    assert game.score() == 16
