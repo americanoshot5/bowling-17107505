@@ -49,4 +49,4 @@ Run a single test:
 
 ## Development process
 
-This project was built following the `test-driven-development` skill in `.claude/skills/test-driven-development/`: each behavior gets a `plan_<feature>.md` design note, then a failing test, then the minimal implementation to pass it — with a human-confirmed checkpoint and a commit at each stage. See the git history for the full PLAN → RED → GREEN record.
+This project was built following the `test-driven-development` skill in `.claude/skills/test-driven-development/`: each behavior gets a `plans/plan_<feature>.md` design note, then a failing test, then the minimal implementation to pass it — with a human-confirmed checkpoint and a commit at each stage. See the git history for the full PLAN → RED → GREEN record.
