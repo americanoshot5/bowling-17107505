@@ -55,3 +55,13 @@ def test_spare_in_tenth_frame_gets_one_bonus_roll():
     game.roll(4)
 
     assert game.score() == 14
+
+
+def test_strike_in_tenth_frame_gets_two_bonus_rolls():
+    game = Game()
+    roll_many(game, 18, 0)
+    game.roll(10)
+    game.roll(3)
+    game.roll(4)
+
+    assert game.score() == 17
