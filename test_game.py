@@ -38,3 +38,10 @@ def test_one_strike_adds_next_two_rolls_as_bonus():
     roll_many(game, 16, 0)
 
     assert game.score() == 24
+
+
+def test_perfect_game_scores_three_hundred():
+    game = Game()
+    roll_many(game, 12, 10)
+
+    assert game.score() == 300
